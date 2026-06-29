@@ -1,0 +1,25 @@
+{
+  "name": "ocp-cicd-demo",
+  "version": "1.0.0",
+  "description": "First repo deployed on container",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saipriyas-source/ocp-cicd-demo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/saipriyas-source/ocp-cicd-demo/issues"
+  },
+  "homepage": "https://github.com/saipriyas-source/ocp-cicd-demo#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
