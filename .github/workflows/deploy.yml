@@ -14,13 +14,12 @@ jobs:
 
     - name: Install oc CLI
       run: |
-        curl -L https://mirror.openshift.com/pub/openshift-v4/clients/ocp/stable/openshift-client-linux.tar.gz -o oc.tar.gz
+        curl -sL https://mirror.openshift.com/pub/openshift-v4/clients/ocp/stable/openshift-client-linux.tar.gz -o oc.tar.gz
         tar -xzf oc.tar.gz
         sudo mv oc /usr/local/bin/
 
     - name: Login to OpenShift
-      run: |
-        oc login --token=${{ secrets.OCP_TOKEN }} --server=${{ secrets.OCP_SERVER }} --insecure-skip-tls-verify=true
+      run: oc login --token=${{ secrets.OCP_TOKEN }} --server=${{ secrets.OCP_SERVER }} --insecure-skip-tls-verify=true
 
     - name: Deploy to OpenShift
       run: |
