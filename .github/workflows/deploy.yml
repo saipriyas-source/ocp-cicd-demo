@@ -13,7 +13,6 @@ jobs:
       uses: actions/checkout@v4
 
     - name: Install oc CLI
-      run: |
        uses: redhat-actions/openshift-tools-installer@v1
        with:
         oc: latest
