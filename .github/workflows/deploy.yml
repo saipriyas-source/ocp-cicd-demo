@@ -13,9 +13,9 @@ jobs:
       uses: actions/checkout@v4
 
     - name: Install oc CLI
-       uses: redhat-actions/openshift-tools-installer@v1
-       with:
-        oc: latest
+      uses: redhat-actions/openshift-tools-installer@v1
+      with:
+       oc: latest
 
     - name: Login to OpenShift
       run: oc login --token=${{ secrets.OCP_TOKEN }} --server=${{ secrets.OCP_SERVER }} --insecure-skip-tls-verify=true
