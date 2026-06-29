@@ -14,9 +14,9 @@ jobs:
 
     - name: Install oc CLI
       run: |
-        curl -sL https://mirror.openshift.com/pub/openshift-v4/clients/ocp/stable/openshift-client-linux.tar.gz -o oc.tar.gz
-        tar -xzf oc.tar.gz
-        sudo mv oc /usr/local/bin/
+       uses: redhat-actions/openshift-tools-installer@v1
+       with:
+        oc: latest
 
     - name: Login to OpenShift
       run: oc login --token=${{ secrets.OCP_TOKEN }} --server=${{ secrets.OCP_SERVER }} --insecure-skip-tls-verify=true
